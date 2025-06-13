@@ -312,6 +312,22 @@ tokenizer_configs:
     end_of_text_token: "<|endoftext|>"
     prefix_token: "<|endoftext|>"
 
+  - name: huggingface/smollm2-135m
+    tokenizer_spec:
+      class_name: "helm.tokenizers.huggingface_tokenizer.HuggingFaceTokenizer"
+      args:
+        pretrained_model_name_or_path: HuggingFaceTB/SmolLM2-135M
+    end_of_text_token: "<|endoftext|>"
+    prefix_token: "<|endoftext|>"
+
+  - name: huggingface/smollm2-135m-instruct
+    tokenizer_spec:
+      class_name: "helm.tokenizers.huggingface_tokenizer.HuggingFaceTokenizer"
+      args:
+        pretrained_model_name_or_path: HuggingFaceTB/SmolLM2-135M-Instruct
+    end_of_text_token: "<|endoftext|>"
+    prefix_token: "<|im_end|>"
+
   # Lighting AI
   - name: lightningai/lit-gpt
     tokenizer_spec:
@@ -453,9 +469,27 @@ tokenizer_configs:
     end_of_text_token: "<|endoftext|>"
     prefix_token: ""
 
+  - name: allenai/olmo-2-1124-7b-instruct
+    tokenizer_spec:
+      class_name: "helm.tokenizers.huggingface_tokenizer.HuggingFaceTokenizer"
+    end_of_text_token: "<|endoftext|>"
+    prefix_token: "<|endoftext|>"
+
+  - name: allenai/olmo-2-0325-32b-instruct
+    tokenizer_spec:
+      class_name: "helm.tokenizers.huggingface_tokenizer.HuggingFaceTokenizer"
+    end_of_text_token: "<|endoftext|>"
+    prefix_token: "<|endoftext|>"
+
+  # Marin Community
+  - name: marin-community/marin-8b-instruct
+    tokenizer_spec:
+      class_name: "helm.tokenizers.huggingface_tokenizer.HuggingFaceTokenizer"
+    end_of_text_token: "<|eot_id|>"
+    prefix_token: "<|begin_of_text|>"
 
   # Microsoft
-  - name: microsoft/phi-2  
+  - name: microsoft/phi-2
     tokenizer_spec:  
       class_name: "helm.tokenizers.huggingface_tokenizer.HuggingFaceTokenizer"  
     end_of_text_token: "<|endoftext|>"  
